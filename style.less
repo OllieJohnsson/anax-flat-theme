@@ -1,4 +1,4 @@
-/** 
+/**
 * Anax Flat theme.
 */
 @import url(modules.less);
@@ -14,8 +14,47 @@
     left: -140px;
 }
 
-.site-logo-text-icon {
-    img {
-        vertical-align: bottom;
+.sidebar {
+    text-decoration: none;
+    & a {
+        color: #666;
+    }
+}
+
+
+
+
+
+
+.flash-wrap img{
+    max-width: 100%;
+}
+
+.myImage {
+    max-width: 400px;
+
+    & img {
+        width: 100%;
+    }
+}
+
+
+
+@media screen and (max-width: 1400px) {
+    .logo-1 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .sidebar {
+        // width: 100%;
+        display: none;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .footer-column {
+        width: 100%;
     }
 }

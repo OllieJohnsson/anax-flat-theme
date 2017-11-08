@@ -98,7 +98,7 @@ check: npm-version
 .PHONY: less
 less: prepare-build
 	@$(call HELPTEXT,$@)
-	
+
 	$(foreach file, $(LESS), $(LESSC) $(LESS_OPTIONS) $(file) build/css/$(basename $(file)).css; )
 	$(foreach file, $(LESS), $(LESSC) --clean-css $(LESS_OPTIONS) $(file) build/css/$(basename $(file)).min.css; )
 
@@ -148,11 +148,11 @@ update:
 # target: npm-update         - Update npm development npm packages.
 # target: npm-version        - Display version for each npm package.
 .PHONY: npm-installl npm-update npm-version
-npm-install: 
+npm-install:
 	@$(call HELPTEXT,$@)
 	npm install
 
-npm-update: 
+npm-update:
 	@$(call HELPTEXT,$@)
 	npm update
 
@@ -163,3 +163,31 @@ npm-version:
 	@$(call CHECK_VERSION, $(CSSLINT))
 	@$(call CHECK_VERSION, $(STYLELINT))
 	@$(call CHECK_VERSION, $(LESSC), | cut -d ' ' -f 2)
+
+
+
+
+
+
+
+# target: upgrade-normalize  - Upgrade LESS module - Normalize.
+.PHONY: upgrade-normalize
+upgrade-normalize:
+	@$(call HELPTEXT,$@)
+	npm update normalize.css
+	cp node_modules/normalize.css/normalize.css modules/normalize.less
+
+
+# target: upgrade-responsive-menu - Upgrade LESS module - Responsive menu
+.PHONY: upgrade-responsive-menu
+upgrade-responsive-menu:
+	@$(call HELPTEXT,$@)
+	npm update desinax-responsive-menu
+	cp node_modules/desinax-responsive-menu/src/less/responsive-menu.less modules/
+	cp node_modules/desinax-responsive-menu/src/js/responsive-menu.js js/
+
+
+# target: upgrade                 - Upgrade external LESS modules.
+.PHONY: upgrade
+upgrade: upgrade-normalize upgrade-responsive-menu
+	@$(call HELPTEXT,$@)
