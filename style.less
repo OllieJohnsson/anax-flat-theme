@@ -5,38 +5,78 @@
 
 
 
+@textColor: black;
+// @mainColor: #009091;
+@mainColor: #23272e;;
+
+
+
+
+
+
+p {
+    line-height: 22px;
+}
+
 /** --------------------------------------------------------------
  *  Logo images
  */
 .logo-1 {
     position: absolute;
     top: 70px;
-    left: -140px;
+    left: -180px;
 }
 
-.sidebar {
-    text-decoration: none;
+
+
+
+.outer-wrap-breadcrumb {
     & a {
+        text-decoration: none;
+
         color: #666;
     }
-}
-
-
-
-
-
-
-.flash-wrap img{
-    max-width: 100%;
-}
-
-.myImage {
-    max-width: 400px;
-
-    & img {
-        width: 100%;
+    & ul {
+        padding-left: 20px;
+    }
+    & li {
+        list-style-type: none;
     }
 }
+
+
+.outer-wrap-after-main {
+    // background-color: lightBlue;
+}
+
+
+
+
+.gitHubImage {
+     margin-left: 0;
+     width: 200px;
+
+     & img {
+         width: 100%;
+     }
+}
+
+.mainLink {
+    & a {
+        text-decoration: none;
+        color: @mainColor;
+    }
+}
+
+
+.testImage {
+     width: 100px;
+     & img {
+         width: 100%;
+     }
+}
+
+
 
 
 
@@ -46,9 +86,11 @@
     }
 }
 
-@media screen and (max-width: 750px) {
-    .sidebar {
-        // width: 100%;
+@media screen and (max-width: 950px) {
+    .has-sidebar {
+            width: 100%;
+    }
+    .sidebar-left {
         display: none;
     }
 }
@@ -56,5 +98,20 @@
 @media screen and (max-width: 700px) {
     .footer-column {
         width: 100%;
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 590px) {
+    .navbar2 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .main {
+        padding: 16px;
     }
 }

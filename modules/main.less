@@ -1,0 +1,42 @@
+.main {
+    // background-color: lightgreen;
+    padding: 20px 50px;
+    color: lighten(@textColor, 20%);
+
+    & article {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+
+.has-sidebar {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0 50px;
+    width: 75%;
+    // background-color: #eee;
+    min-height: 287px;
+
+    & a {
+        color: lighten(@textColor, 50%);
+        text-decoration: none;
+    }
+
+    & article {
+        max-width: 500px;
+        margin: 60px auto;
+    }
+}
+
+.next-previous {
+    margin: 30px 0;
+}
+
+
+.myImage {
+    max-width: 400px;
+    margin: 0 auto;
+    & img {
+        width: 100%;
+    }
+}
