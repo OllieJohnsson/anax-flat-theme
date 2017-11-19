@@ -1,0 +1,27 @@
+@gridImage: "../img/grid/grid950x24x30x10-nomargin.png";
+// @gridImage: "../img/grid/grid940x12x60x20-nomargin.png";
+
+
+
+.inner-wrap {
+    @gridWidth: 960px;
+    .grid(@gridWidth);
+
+    html.vgrid &, body.route-grid & {
+        .showGrid(@gridWidth, @gridImage);
+    }
+
+    &.inner-wrap-header, &.inner-wrap-flash {
+        @gridWidth: 100%;
+        overflow: auto;
+        .grid(@gridWidth);
+        html.vgrid &, body.route-grid & {
+            .showGrid(@gridWidth, @gridImage);
+        }
+    }
+}
+
+
+.row {
+    .row();
+}

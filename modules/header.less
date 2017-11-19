@@ -1,23 +1,31 @@
-.site-header {
+.inner-wrap-header {
     background-color: @mainColor;
-    // padding: 12px;
-    height: 65px;
-    padding-top: 10px;
 }
 
 .site-logo-text {
+    // .column(3);
+    .column(6);
+
     & a {
         color: white;
         text-decoration: none;
         font-size: 2em;
-        margin: 0 16px;
     }
 }
 
 .site-logo-text-icon {
-    margin-right: 10px;
+    margin: 0 20px;
+    & img {
+        height: 20px;
+    }
 }
 
-.flash-wrap img{
-    max-width: 100%;
+.flash-wrap{
+    height: 168px;
+    overflow: hidden;
+    .column(@columns);
+    box-sizing: border-box;
+    & img {
+        width: 100%;
+    }
 }

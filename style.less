@@ -3,20 +3,10 @@
 */
 @import url(modules.less);
 
-
-
 @textColor: black;
-// @mainColor: #009091;
 @mainColor: #23272e;;
 
 
-
-
-
-
-p {
-    line-height: 22px;
-}
 
 /** --------------------------------------------------------------
  *  Logo images
@@ -27,38 +17,8 @@ p {
     left: -180px;
 }
 
-
-
-
-.outer-wrap-breadcrumb {
-    & a {
-        text-decoration: none;
-
-        color: #666;
-    }
-    & ul {
-        padding-left: 20px;
-    }
-    & li {
-        list-style-type: none;
-    }
-}
-
-
-.outer-wrap-after-main {
-    // background-color: lightBlue;
-}
-
-
-
-
-.gitHubImage {
-     margin-left: 0;
-     width: 200px;
-
-     & img {
-         width: 100%;
-     }
+.wrap-all {
+    background-color: #eee;
 }
 
 .mainLink {
@@ -68,11 +28,9 @@ p {
     }
 }
 
-
 .testImage {
-     width: 100px;
      & img {
-         width: 100%;
+         height: @magicNumber*10;
      }
 }
 
@@ -86,32 +44,78 @@ p {
     }
 }
 
-@media screen and (max-width: 950px) {
-    .has-sidebar {
-            width: 100%;
-    }
-    .sidebar-left {
-        display: none;
-    }
-}
-
-@media screen and (max-width: 700px) {
-    .footer-column {
-        width: 100%;
-        display: block;
-        margin: 0 auto;
-        text-align: center;
+@media screen and (max-width: 960px) {
+    .flash-wrap {
+        width: none !important;
+        & img {
+            height: 168px;
+            width: none !important;
+        }
     }
 }
 
-@media screen and (max-width: 590px) {
+@media screen and (max-width: 800px) {
     .navbar2 {
         display: none;
     }
+    .site-logo-text {
+        .column(22);
+    }
 }
+
+@media screen and (max-width: 730px) {
+    .has-sidebar {
+        .column(20);
+        .push(2);
+    }
+    .sidebar {
+        display: none;
+    }
+    .main.has-sidebar-left.has-sidebar-right {
+        .column(16);
+        .push(4);
+    }
+}
+
+
+
+
+@media screen and (max-width: 655px) {
+    .byline {
+        .column(16);
+        .push(4);
+    }
+
+    .main {
+        .column(20);
+        .push(2);
+    }
+
+    .main.has-sidebar-left.has-sidebar-right {
+        .column(20);
+        .push(2);
+    }
+
+    .footer-column {
+        text-align: center;
+        .column(@columns);
+    }
+}
+
+
 
 @media screen and (max-width: 450px) {
     .main {
-        padding: 16px;
+        .column(22);
+        .push(1);
+    }
+    .main.has-sidebar-left.has-sidebar-right {
+        .column(22);
+        .push(1);
+    }
+
+    .byline {
+        .column(22);
+        .push(1);
     }
 }

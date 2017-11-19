@@ -2,23 +2,16 @@
 @maxButtonFontSize: 2em;
 @maxButtonColor: white;
 
-.border(@radius: 0) {
-    border-radius: @radius;
-    // border: 1px solid darken(@nav-theme, 15%);
-}
+// .border(@radius: 0) {
+//     border-radius: @radius;
+//     border: 1px solid darken(@nav-theme, 15%);
+// }
 
 .navbar2 {
-    // background-color: @nav-theme;
+    .column(16);
     color: white;
-    display: inline-block;
-    margin: 0 10px;
-    // .border(10px);
+}
 
-    & li {
-        &:last-child {
-            // width: 20px;
-            // .border(5px);
-            // background-color: yellow;
-        }
-    }
+.rm-navbar-max {
+    .column(2);
 }

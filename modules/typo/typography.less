@@ -1,0 +1,103 @@
+@import "typography-font-families.less";
+@import "typography-sizes.less";
+@import "typography-mixins.less";
+@import "typography-defaults.less";
+
+body {
+    .font();
+    .typographyHeadings();
+    .typographyTextElements();
+    .typographyCodeElements();
+    .typographyListElements();
+    .typographyTableElements();
+    .typographyOtherElements();
+}
+
+
+html.hgrid, .route-typography {
+    .inner-wrap {
+        background-image: url(../img/grid/horisontal-grid-24.png);
+    }
+}
+
+
+
+
+nav div ul a {
+    @height: 48px;
+    .calcMargin(@height);
+    padding-top: @margin / 2!important;
+    padding-bottom: @margin / 2!important;
+}
+
+code, kbd, samp {
+    @height: 1.25em;
+    .fontSize(@height);
+
+}
+
+pre, .code {
+    @height: 1.25*5em;
+    .calcMargin(@height);
+    padding-top: @margin / 2!important;
+    padding-bottom: @margin / 2!important;
+}
+
+
+
+
+
+
+
+.gitHubImage img {
+    box-sizing: border-box;
+    height: 40px;
+    .calcMargin(40);
+}
+
+
+
+
+@fontSizeBody:  16px;
+// @fontSizeH1: 2.375em;
+// @fontSizeH2: 1.875em;
+// @fontSizeH3: 1.375em;
+// @fontSizeH4: 1.25em;
+// @fontSizeH5: 1em;
+// @fontSizeH6: 0.875em;
+//
+// @fontSizeCodeInline:  1.25em;
+// @fontSizeCodeBlock:   1.25em;
+// @lineHeightCodeBlock: 1.6;
+//
+//
+//
+// // Monospace
+// @fontFamilyCourier:         "Courier New", Courier, monospace;
+// @fontFamilyMonospace:       monospace;
+//
+// // Serif
+// @fontFamilyCambria:         Cambria, Georgia, Times, 'Times New Roman', serif;
+// @fontFamilyTimes:           Times, 'Times New Roman', serif;
+// @fontFamilyGaramond:        Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", Georgia, "Times New Roman", Times, serif;
+//
+// // Sans-serif
+// @fontFamilyHelvetica:       Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+// @fontFamilyCalibri:         Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+// @fontFamilyMyriadPro:       MyriadPro-Regular, 'Myriad Pro Regular', MyriadPro, 'Myriad Pro', Helvetica, Arial, sans-serif;
+// @fontFamilyHelveticaNeue:   "Helvetica Neue", Helvetica, Arial, sans-serif;
+// @fontFamilyArial:           Arial, sans-serif;
+//
+//
+//
+// /**
+//  * Default font-families
+//  */
+@fontFamilyHeadings:  @fontFamilyTest;
+@fontFamilyBody:      @fontFamilyHelveticaNeue;
+// @fontFamilyCode:      @fontFamilyCourier;
+//
+// @colorH1BorderBottom: #666;
+// @colorH2BorderBottom: #999;
+@borderSizeH1: 1px;
+// @borderSizeH2: 1px;
