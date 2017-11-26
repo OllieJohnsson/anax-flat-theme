@@ -1,29 +1,17 @@
-.outer-wrap-after-main {
-    background-color: #eee;
-}
-
-.inner-wrap-after-main {
-    box-sizing: border-box;
-    background-color: white;
-    padding: 96px 0;
-    margin-bottom: @magicNumber*4;
-    border-radius: 0 0 20px 20px;
-}
 
 
 
 .byline {
-    // .column(6);
-    // .push(3);
     .column(12);
     .push(6);
     box-sizing: border-box;
-    background-color: #eeeeee;
+    background-color: white;
     overflow: auto;
     border-radius: 12px;
-    color: lighten(@textColor, 60%);
+    color: #999;
     padding: 0 16px;
-    box-shadow: 0 10px 40px rgba(100, 100, 100, 0.06);
+    margin-top: @magicNumber*3;
+    margin-bottom: @magicNumber*4;
 
     & img {
         float: left;

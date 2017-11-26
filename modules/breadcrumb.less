@@ -5,18 +5,11 @@
 .breadcrumb-wrap {
     .column(@columns - 2);
     .push(1);
-    & a {
-        text-decoration: none;
-        color: #666;
-    }
-    & ul {
-        padding-left: 0;
-    }
     & li {
-        list-style-type: none;
         display: inline-block;
         & + li:before {
             content: "» ";
+            color: @linkColor;
         }
     }
 }

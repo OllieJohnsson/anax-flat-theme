@@ -1,0 +1,88 @@
+@import url(style-base.less);
+@import url('https://fonts.googleapis.com/css?family=Bungee+Shade');
+
+
+
+@footerColor: #ffd923;
+@navbarColor: #19cae7;
+
+.outer-wrap-flash {
+    display: none;
+}
+
+
+.sidebar {
+    & a, a:hover {
+        color: #de0088;
+    }
+}
+
+html {
+    background-image: url("../img/fun/fun.png");
+
+    & h1 {
+        font-family: 'Bungee Shade', cursive;
+        .wobble();
+    }
+    & a:hover {
+        transition: font-size 0.1s ease-out;
+        font-size: 140%;
+    }
+}
+
+
+.outer-wrap-footer a {
+    color: @navbarColor;
+    &:hover {
+        color: lighten(@navbarColor, 20%);
+    }
+}
+
+
+.spin(@speed; @direction) {
+    animation-name: spin;
+    animation-duration: @speed;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: @direction;
+}
+
+.wobble {
+    animation-name: wobble;
+    animation-duration: 500ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes wobble {
+    0%  { -webkit-transform:  rotate(0deg); }
+    20%  { -webkit-transform:  rotate(2deg); }
+    50%  { -webkit-transform:  rotate(-2deg); }
+    100%  { -webkit-transform:  rotate(0deg); }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+
+.byline img, .funImageRight {
+    .spin(@speed: 2000ms; @direction: normal);
+    & img {
+        width: 100%;
+    }
+}
+.funImageLeft {
+    .spin(@speed: 2000ms; @direction: reverse);
+    & img {
+        width: 100%;
+    }
+}

@@ -43,6 +43,14 @@ pre, .code {
     padding-bottom: @margin / 2!important;
 }
 
+.analysisImage img {
+    @height: 100%;
+    .calcMargin(@height) {
+        padding-top: @margin / 2;
+        padding-bottom: @margin / 2;
+    }
+
+}
 
 
 
@@ -99,5 +107,5 @@ pre, .code {
 //
 // @colorH1BorderBottom: #666;
 // @colorH2BorderBottom: #999;
-@borderSizeH1: 1px;
+@borderSizeH1: 0;
 // @borderSizeH2: 1px;

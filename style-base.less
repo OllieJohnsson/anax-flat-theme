@@ -3,39 +3,38 @@
 */
 @import url(modules.less);
 
-@textColor: black;
-@mainColor: #23272e;;
+@mainColor: #23272e;
+@bodyTextColor: @mainColor;
+@headingsColor: @mainColor;
+@linkColor: #999;
+
+@navbarColor: @mainColor;
+@footerColor: none;
+@backgroundColor: #eee;
 
 
 
-/** --------------------------------------------------------------
- *  Logo images
- */
-.logo-1 {
-    position: absolute;
-    top: 70px;
-    left: -180px;
-}
 
-.wrap-all {
-    background-color: #eee;
-}
 
-.mainLink {
+html {
+    background-color: @backgroundColor;
+    overflow-x: hidden;
+    color: @bodyTextColor;
     & a {
+        color: @linkColor;
         text-decoration: none;
-        color: @mainColor;
+    }
+    & a:hover {
+        color: lighten(@linkColor, 10%);
+    }
+    & ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+    & h1 {
+        color: @headingsColor;
     }
 }
-
-.testImage {
-     & img {
-         height: @magicNumber*10;
-     }
-}
-
-
-
 
 
 @media screen and (max-width: 1400px) {
@@ -54,7 +53,7 @@
     }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1050px) {
     .navbar2 {
         display: none;
     }
@@ -76,8 +75,6 @@
         .push(4);
     }
 }
-
-
 
 
 @media screen and (max-width: 655px) {

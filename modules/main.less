@@ -1,16 +1,14 @@
-// .outer-wrap-main {
-//     background-color: #eee;
-// }
 
 .inner-wrap-main {
     background-color: white;
+    border-radius: 0 0 20px 20px;
+    padding-bottom: @magicNumber*4;
 }
 
 .main {
     .column(16);
     .push(4);
     box-sizing: border-box;
-    color: lighten(@textColor, 20%);
 }
 
 
@@ -19,11 +17,6 @@
     .push(2);
     box-sizing: border-box;
     min-height: @magicNumber*13;
-
-    & a {
-        color: lighten(@textColor, 50%);
-        text-decoration: none;
-    }
 }
 
 
@@ -32,16 +25,11 @@
     .push(1);
     box-sizing: border-box;
     min-height: 287px;
-    & a {
-        color: lighten(@textColor, 50%);
-        text-decoration: none;
-    }
 }
-
-
 
 .next-previous {
     margin: @magicNumber 0;
+    color: @linkColor;
 }
 .next {
     float: right;
@@ -50,8 +38,47 @@
 
 .myImage {
     max-width: 400px;
-    margin: 0 auto;
+    margin: @magicNumber*2 auto;
     & img {
         width: 100%;
     }
+}
+
+
+
+
+
+
+
+.testImage {
+    max-width: @magicNumber*10;
+     & img {
+         width: 100%;
+     }
+}
+
+
+.colorBlock {
+    display: inline-block;
+    width: 72px;
+    height: 72px;
+    color: rgba(0, 0, 0, 0);
+    border: solid 1px #eee;
+    box-sizing: border-box;
+}
+
+
+.analysisImage {
+    max-width: 500px;
+    margin: 0 auto;
+    margin-left: -12px;
+    & img {
+        width: 100%;
+    }
+}
+
+.logo-1 {
+    position: absolute;
+    top: 70px;
+    left: -180px;
 }

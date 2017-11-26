@@ -1,27 +1,15 @@
-.outer-wrap-footer, .inner-wrap-footer {
-    background-color: #eee;
-
+.outer-wrap-footer {
+    background-color: @footerColor;
 }
 
 .footer {
     text-align: center;
-    & a {
-        text-decoration: none;
-        color: lighten(@textColor, 50%);
-    }
-    & ul {
-        list-style-type: none;
-        padding-left: 0;
-    }
 }
-
 
 .footer-column-wrapper {
     overflow: auto;
     margin-bottom: @magicNumber;
-
 }
-
 
 .footer-column {
     .column(@columns / 3);
@@ -44,6 +32,7 @@
         display: inline-block;
         & + li:before {
             content: " | ";
+            color: @linkColor;
         }
     }
 }

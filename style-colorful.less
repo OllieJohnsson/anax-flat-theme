@@ -1,0 +1,43 @@
+@import url(style-light.less);
+
+@headingsColor: #00C9FC;
+@navbarColor: #00C9FC;
+@footerColor: #00C9FC;
+@linkColor: #F9547B;
+
+
+.outer-wrap-footer {
+    & p {
+        color: white;
+    }
+    & a {
+        color: lighten(@footerColor, 40%);
+    }
+    & a:hover {
+        color: lighten(@footerColor, 50%);
+    }
+    & li+li:before {
+        color: white;
+    }
+    & h4 {
+        color: darken(@footerColor, 20%);
+    }
+}
+
+
+
+html {
+    & h4 {
+        color: #00C9FC;
+    }
+    & .wrap-all {
+        background-image: url("../img/BG.png");
+        background-repeat: no-repeat;
+    }
+}
+
+
+
+// #00C9FC blå
+// #83FF00 grön
+// #F9547B röd

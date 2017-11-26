@@ -1,0 +1,36 @@
+@import url(style-light.less);
+
+@backgroundColor: #0E0E0F;
+// @backgroundColor: #11d890;
+@bodyTextColor: #eee;
+@navbarColor: #11d890;
+@headingsColor: #D81159;
+@footerColor: #14161E;
+
+// h4 {
+//     color: #11d890;
+// }
+
+
+.inner-wrap-main, .byline, .sidebar {
+    box-shadow: none;
+}
+
+.inner-wrap-main, .inner-wrap-breadcrumb, .byline {
+    background-color: #14161E;
+}
+
+.sidebar {
+    background-color: #1D1F2B;
+    & h4 {
+        color: #D81159;
+    }
+}
+
+.outer-wrap-footer h4{
+    color: #D81159;
+}
+
+.byline {
+    color: @bodyTextColor;
+}
