@@ -1,4 +1,24 @@
-.sidebar {
+.sidebar-left {
+    .column(5);
+    .push(1);
+    box-sizing: border-box;
+    background-color: #eee;
+    border-radius: 12px;
+    padding: 0 @magicNumber/2;
+    overflow: auto;
+}
+
+.sidebar-right {
+    .column(5);
+    .push(2);
+    box-sizing: border-box;
+    background-color: #eee;
+    border-radius: 12px;
+    padding: 0 @magicNumber/2;
+    overflow: auto;
+}
+
+.sidebar-right.has-sidebar-left {
     .column(5);
     .push(1);
     box-sizing: border-box;

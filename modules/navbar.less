@@ -2,6 +2,7 @@
 
 @maxButtonFontSize: 2em;
 @maxButtonColor: white;
+@navbarMenuButtonClickedColor: white;
 
 // .border(@radius: 0) {
 //     border-radius: @radius;
@@ -12,8 +13,16 @@
     .column(16);
     .push(1);
     color: white;
+
+    & .selected {
+        color: #bbb;
+    }
 }
 
 .rm-navbar-max {
     .column(2);
+
+    & .selected {
+        color: #bbb;
+    }
 }

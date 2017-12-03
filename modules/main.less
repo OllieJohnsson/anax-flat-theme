@@ -12,12 +12,13 @@
 }
 
 
-.has-sidebar-left {
+.has-sidebar-left, .has-sidebar-right{
     .column(14);
     .push(2);
     box-sizing: border-box;
     min-height: @magicNumber*13;
 }
+
 
 
 .main.has-sidebar-left.has-sidebar-right {
@@ -28,34 +29,22 @@
 }
 
 .next-previous {
-    margin: @magicNumber 0;
+    margin: @magicNumber*2 0 @magicNumber 0;
     color: @linkColor;
+    background-color: yellow;
 }
+
+
 .next {
+    margin-bottom: @magicNumber;
     float: right;
 }
 
-
-.myImage {
-    max-width: 400px;
-    margin: @magicNumber*2 auto;
-    & img {
-        width: 100%;
-    }
+.previous {
+    margin-bottom: @magicNumber;
+    float: left;
 }
 
-
-
-
-
-
-
-.testImage {
-    max-width: @magicNumber*10;
-     & img {
-         width: 100%;
-     }
-}
 
 
 .colorBlock {
@@ -68,17 +57,23 @@
 }
 
 
-.analysisImage {
-    max-width: 500px;
-    margin: 0 auto;
-    margin-left: -12px;
-    & img {
-        width: 100%;
-    }
-}
+// .analysisImage {
+//     max-width: 500px;
+//     margin: 0 auto;
+//     margin-left: -12px;
+//     & img {
+//         width: 100%;
+//     }
+// }
 
 .logo-1 {
     position: absolute;
     top: 70px;
     left: -180px;
+}
+
+
+.route-analysis-speed-and-usability article h3, .route-analysis-colorscheme article h3 {
+    border-top: solid 1px #eee;
+    padding-top: @magicNumber * 2 - 1;
 }

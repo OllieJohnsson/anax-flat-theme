@@ -33,6 +33,14 @@ html {
     }
     & h1 {
         color: @headingsColor;
+        clear: both;
+        & a {
+            color: @headingsColor;
+            font-family: 'Abril Fatface',cursive;
+        }
+        & a:hover {
+            color: lighten(@headingsColor, 20%);
+        }
     }
 }
 
@@ -53,7 +61,7 @@ html {
     }
 }
 
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 1330px) {
     .navbar2 {
         display: none;
     }
@@ -98,6 +106,15 @@ html {
         .column(@columns);
     }
 }
+
+
+@media screen and (max-width: 655px) {
+    table td a {
+        background-color: yellow;
+        display: none;
+    }
+}
+
 
 
 
