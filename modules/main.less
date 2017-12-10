@@ -3,6 +3,7 @@
     background-color: white;
     border-radius: 0 0 20px 20px;
     padding-bottom: @magicNumber*4;
+    margin-bottom: @magicNumber*3;
 }
 
 .main {
@@ -20,28 +21,30 @@
 }
 
 
-
-.main.has-sidebar-left.has-sidebar-right {
-    .column(10);
+main.has-sidebar-left {
+// .main.has-sidebar-left.has-sidebar-right {
+    .column(15);
     .push(1);
     box-sizing: border-box;
     min-height: 287px;
+    margin-top: @magicNumber;
+    & article {
+        margin-bottom: @magicNumber * 2;
+    }
 }
 
 .next-previous {
-    margin: @magicNumber*2 0 @magicNumber 0;
     color: @linkColor;
-    background-color: yellow;
 }
 
 
 .next {
-    margin-bottom: @magicNumber;
+    margin-bottom: @magicNumber * 2;
     float: right;
 }
 
 .previous {
-    margin-bottom: @magicNumber;
+    margin-bottom: @magicNumber * 2;
     float: left;
 }
 
@@ -73,7 +76,9 @@
 }
 
 
-.route-analysis-speed-and-usability article h3, .route-analysis-colorscheme article h3 {
+.route-analysis-speed-and-usability article h3,
+.route-analysis-colorscheme article h3,
+.route-analysis-design-principles h3 {
     border-top: solid 1px #eee;
     padding-top: @magicNumber * 2 - 1;
 }

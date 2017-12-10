@@ -1,0 +1,37 @@
+@import url(style-default.less);
+
+@footerColor: rgba(0, 0, 0, 0.8);
+@footerTitleColor: white;
+
+html {
+    background-image: linear-gradient(rgba(255, 255, 255, .8) 20%, rgba(255, 255, 255, 0)),
+    url(../image/tottenham-logo.png),
+    url(../image/tottenham-logo.png),
+    url(../image/tottenham-logo.png),
+    url(../image/tottenham-logo.png),
+    url(../image/tottenham-logo.png),
+    url(../image/tottenham-logo.png),
+    url(../image/texture.png);
+    background-repeat: repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, repeat;
+    background-attachment: fixed;
+    background-position: 0, 0 100px, 0 400px, 0 700px, 100% 100px, 100% 400px, 100% 700px, 0;
+    background-size: auto, 200px, 200px, 200px, 200px, 200px, 200px, auto;
+}
+
+
+.sidebar {
+    background: linear-gradient(rgba(255, 255, 255, .8) 20%, rgba(255, 255, 255, 0)), url(../image/texture.png);
+    background-attachment: fixed;
+}
+
+#rm-menu {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.outer-wrap-flash {
+    display: none;
+}
+
+.inner-wrap-breadcrumb {
+    padding-top: @magicNumber * 2;
+}

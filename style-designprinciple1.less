@@ -1,0 +1,35 @@
+@import url(style-default.less);
+
+@backgroundColor: #2D3C5E;
+@footerColor: #25324F;
+
+
+
+.inner-wrap-main {
+    border-radius: 0;
+    box-shadow: 0 130px 100px 20px rgba(0, 0, 0, 0.3);
+    & img {
+        box-shadow: 0 6px 15px 6px rgba(90, 100, 120, 0.3);
+    }
+}
+
+
+
+.outer-wrap-after-main {
+    padding-top: @magicNumber * 6;
+    background-image: url("../image/perspective.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.inner-wrap-main {
+    margin-bottom: 0;
+}
+
+
+@media screen and (max-width: 1890px) {
+    .outer-wrap-after-main {
+        background-size: cover;
+    }
+}

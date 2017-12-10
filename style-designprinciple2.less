@@ -1,0 +1,32 @@
+@import url(style-default.less);
+
+@footerColor: rgba(0, 0, 0 , 0);
+
+.outer-wrap-footer {
+    background-image: linear-gradient(rgba(255, 255, 255, .8) 20%, rgba(255, 255, 255, 0)),
+    url("../image/mountains.png");
+    background-position: revert;
+    background-size: cover;
+    background-attachment: scroll;
+
+    margin-top: @magicNumber * 5;
+    padding-top: @magicNumber * 3;
+
+    & a {
+        color: white;
+        font-weight: bold;
+    }
+    & a, li+li:before {
+        color: white;
+    }
+    & a:hover {
+        color: #ddd;
+    }
+}
+
+
+@media screen and (max-width: 650px) {
+    .footer-column-wrapper {
+        margin-top: @magicNumber * 4;
+    }
+}

@@ -1,0 +1,40 @@
+@import url(style-default.less);
+
+@footerColor: rgba(0, 0, 0, 0.8);
+@footerTitleColor: white;
+
+
+
+html {
+    background-image: url("../image/larm-rmah-273854.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.outer-wrap-flash {
+    display: none;
+}
+
+.inner-wrap-breadcrumb {
+    padding-top: @magicNumber * 2;
+}
+
+.sidebar {
+    background: linear-gradient(white 130px, rgba(255, 255, 255, .8) 180px, rgba(255, 255, 255, .3)), url(../image/larm-rmah-273854.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    border-radius: 0 0 12px 12px;
+    & a {
+        color: @mainColor;
+    }
+    & a:hover {
+        color: lighten(@mainColor, 20%);
+    }
+
+}

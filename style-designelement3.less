@@ -1,0 +1,147 @@
+@import url(style-default.less);
+
+@navbarColor: #ff3165;
+@selectedColor: white;
+@sidebarHoverColor: white;
+
+
+.navbar2 .selected a {
+    border-top: solid 1px white;
+    border-bottom: solid 1px white;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.outer-wrap-footer {
+    background: linear-gradient(#ef6856, #ff3165);
+    & a, li+li:before {
+        color: #FFBC42;
+    }
+    & a:hover {
+        color: white;
+    }
+}
+
+
+
+html h1, html h2, html h3, html h4, html h1 a {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+article h1 {
+    display: inline-block;
+    border-bottom: solid 5px #ff3165;
+    border-top: solid 5px #ff3165;
+    padding: 12px;
+}
+
+article {
+    clear: both;
+}
+
+
+
+.inner-wrap {
+    &.inner-wrap-main, &.inner-wrap-breadcrumb {
+        @gridWidth: 100%;
+        overflow: auto;
+        .grid(@gridWidth);
+        html.vgrid &, body.route-grid & {
+            .showGrid(@gridWidth, @gridImage);
+        }
+    }
+}
+
+
+
+.outer-wrap-flash {
+    display: none;
+}
+
+.inner-wrap-breadcrumb {
+    padding-top: @magicNumber * 2;
+}
+
+.main.has-sidebar-left {
+    .column(16);
+    .push(2);
+}
+
+.main.has-sidebar-right {
+    .column(16);
+    .push(3);
+}
+
+
+
+.sidebar {
+    background: linear-gradient(#ef6856, #ff3165);
+    color: white;
+    .column(4);
+    & a {
+        color: white;
+    }
+    & a:hover {
+        text-decoration-line: underline;
+    }
+    & h4 {
+        border-top: 2px solid #FFBC42;
+        border-bottom: 2px solid #FFBC42;
+        padding: 12px;
+        text-align: center;
+    }
+    &-left {
+        .column(3);
+        .push(0);
+        border-radius: 0 12px 12px 0;
+    }
+    &-right {
+        .column(3);
+        .push(2);
+        border-radius: 12px 0 0 12px;
+    }
+}
+
+
+
+
+@media screen and (max-width: 1800px) {
+    .sidebar-left {
+        .column(4);
+    }
+    .sidebar-right {
+        .column(4);
+        .push(2);
+    }
+    .main.has-sidebar-right {
+        .column(16);
+        .push(2);
+    }
+
+}
+
+@media screen and (max-width: 1300px) {
+    .sidebar {
+        .column(5);
+    }
+    .sidebar-right {
+        .push(2);
+    }
+    .main.has-sidebar{
+        .column(15);
+        .push(2);
+    }
+}
+
+
+@media screen and (max-width: 1200px) {
+    .sidebar {
+        display: none;
+    }
+    .main.has-sidebar {
+        .column(16);
+        .push(4);
+    }
+}
